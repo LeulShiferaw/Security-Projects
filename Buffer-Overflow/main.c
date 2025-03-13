@@ -5,7 +5,7 @@
 int foo(char * str) {
     char buffer[100];
 
-    strcpy(buffer, str);
+    strcpy(buffer, str);  //Vulnerability
     return 1; 
 }
 
