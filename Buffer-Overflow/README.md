@@ -1,8 +1,8 @@
-## Code for demonstrating Stack-Based buffer overflow
+# Code for demonstrating Stack-Based buffer overflow
 
-# This code was tested on Ubuntu 20.04
+## This code was tested on Ubuntu 20.04
 
-# Steps to run
+## Steps to run
 1. Make sure that stackOverFlow and its debug version are owned by root and have suid bit set
 2. Get $ebp of foo by using gdb
 3. Modify the exploit.py ret hex value to your ebp
