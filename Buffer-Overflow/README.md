@@ -3,12 +3,16 @@
 ## This code was tested on Ubuntu 20.04
 
 ## Prerequistes 
-1. Make sure that stackOverFlow and its debug version are owned by root and have suid bit set
+1. Make sure that stackOverFlow owned by root (sudo chown root ./stackOverFlow) and have suid bit set (sudo chmod 4755 ./stackOverflow)
 2. Get $ebp of foo by using gdb
-3. Modify the exploit.py ret hex value to your ebp
-4. Disable kernel randomize with this command: sudo sysctl -w kernel.randomize_va_space=0
-5. Make sure that the ret value doesn't have a 0 as one of its bytes in the final calculation
+    1. run "gdb ./stackOverflow_dbg"
+    2. "b foo" - break on foo
+    3. "n" - next instruction (so that we have already gone through function prologue)
+    4. "p $ebp"
+3. Modify the exploit.py's ret hex value to your ebp value
+4. Disable kernel randomize with this command (temporarily resets after restart): sudo sysctl -w kernel.randomize_va_space=0
 
 ## Steps to run
-1. Run exploit.py
+1. Run "python3 exploit.py"
 2. run ./stackOverFlow
+    1. You should get a root shell. Congratulations you have escalated your privileges to root!!
