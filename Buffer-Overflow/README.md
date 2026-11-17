@@ -10,7 +10,7 @@
     3. "n" - next instruction (so that we have already gone through function prologue)
     4. "p $ebp"
 3. Modify the exploit.py's ret hex value to your ebp value
-4. Disable kernel randomize with this command (temporarily resets after restart): sudo sysctl -w kernel.randomize_va_space=0
+4. Disable kernel randomize with this command (temporarily, resets after restart): sudo sysctl -w kernel.randomize_va_space=0
 
 ## Steps to run
 1. Run "python3 exploit.py"
