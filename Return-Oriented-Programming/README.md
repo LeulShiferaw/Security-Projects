@@ -18,7 +18,7 @@
     3. run
     4. "p C_FUNCTION" like "p system"
     5. We will disass foo to get the address of leaveret at the end of the function
-6. With all of these value we can put them into exploit_shell.py and it will chain them and give us root shell!
+6. With all of these values we can put them into exploit_shell.py and it will chain them and give us root shell!
 
 ## Tips
 1. The script we use to chain and get root shell is exploit_shell.py
